@@ -25,6 +25,15 @@ app.post('/movies', async (req, res) => {
   res.send(added)
 })
 
+app.put("/movies/:id", async (req, res) => {
+  const newMovie = req.body
+  const id = req.params.id
+  const added = await records.updateMovie(id, newMovie);
+  res.send(added)
+})
+
+
+
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");
 });
