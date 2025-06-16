@@ -25,6 +25,16 @@
             "title": "Home Alone 2",
             "overview": "Kid is stuck home alone on again but in new york!!"
         },
-        { "id": "CLXXXJ8gFo", "title": "Home Alone 3" }
+        { "id": "CLXXXJ8gFo", "title": "Home Alone 3" },
+        {
+            "id": "UqBnH3KIs3",
+            "title": "The Grand Budapest Hotel",
+            "overview": "An adventure by the famous director Wes Anderson."
+        },
+        {
+            "id": "3pnBzdfLPY",
+            "title": "The Phoenician Scheme",
+            "overview": "Another adventure by the famous director Wes Anderson."
+        }
     ]
 }
