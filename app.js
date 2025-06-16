@@ -32,7 +32,11 @@ app.put("/movies/:id", async (req, res) => {
   res.send(added)
 })
 
-
+app.delete('/movies/:id', async (req, res) => {
+  const id = req.params.id
+  const removed = await records.deleteMovie(id)
+  res.send(removed)
+})
 
 app.listen(3000, () => {
   console.log("Server is listening on port 3000");
