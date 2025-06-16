@@ -22,6 +22,11 @@ async function createMovie(movie) {
     return newMovie;
 }
 
+async function searchMovies(searchTerm) {
+    const movies = await getMoviesList();
+    return movies.filter(movie => movie.title && movie.title.toLowerCase().includes(searchTerm.toLowerCase()));
+}
+
 async function updateMovie(id, movie) {
     const movies = await getMoviesList();
     const index = movies.findIndex(m => m.id === id);
@@ -47,4 +52,4 @@ async function deleteMovie(id) {
     return true;
 }
 
-module.exports = { getMoviesList, getMovieById, createMovie, updateMovie, deleteMovie };
+module.exports = { getMoviesList, getMovieById, createMovie, updateMovie, deleteMovie, searchMovies };

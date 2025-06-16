@@ -2,8 +2,10 @@ var express = require("express");
 var app = express();
 const records = require("./records.js");
 
+app.use(express.json())
+
 app.get("/", (req, res) => {
-  res.send("Welcom to Movies API");
+  res.send("Welcome to Movies API");
 });
 
 app.get("/movies", async (req, res) => {
